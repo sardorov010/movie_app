@@ -1,0 +1,10 @@
+import { OnModuleInit } from '@nestjs/common';
+import { PrismaService } from '../../core/database/prisma.service';
+export declare class SeederService implements OnModuleInit {
+    private readonly prisma;
+    private readonly logger;
+    constructor(prisma: PrismaService);
+    onModuleInit(): Promise<void>;
+    private seedSuperadmin;
+    private seedSubscriptionPlans;
+}
